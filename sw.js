@@ -1,6 +1,6 @@
 // 除雪支援システム サービスワーカー：アプリ本体を端末に保存し、通信がなくても起動できるようにする
-const APP='josetsu-app-v2', FONTS='josetsu-fonts';
-const CORE=['./','./index.html','./manifest.webmanifest','./lib/leaflet.css','./lib/leaflet.js','./lib/three.min.js',
+const APP='josetsu-app-v4', FONTS='josetsu-fonts';
+const CORE=['./','./index.html','./manifest.webmanifest','./lib/leaflet.css','./lib/leaflet.js',
   './lib/images/layers.png','./lib/images/layers-2x.png','./lib/images/marker-icon.png','./lib/images/marker-icon-2x.png','./lib/images/marker-shadow.png',
   './icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(APP).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()));});
